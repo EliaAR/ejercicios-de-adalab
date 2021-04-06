@@ -3,8 +3,8 @@ body {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 table {
-  border-spacing: 20px;
   border: solid black 3px;
+  border-spacing: 0px;
 }
 .title {
   color: rgb(99, 13, 179);
@@ -17,7 +17,9 @@ table {
 }
 th {
   letter-spacing: 2px;
+  padding: 10px;
 }
 tbody td {
   text-align: justify;
+  padding: 10px;
 }
