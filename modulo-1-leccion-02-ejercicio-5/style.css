@@ -32,3 +32,7 @@ ul.news li.news__item a.news__item-link {
 /* NO TOCAR ESTOS ESTILOS */
 
 /* Nuevos estilos a partir de esta línea */
+
+ul.news li.news__item a.news__item-link {
+  color: red;
+}
