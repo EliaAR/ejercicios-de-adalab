@@ -1,0 +1,23 @@
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+table {
+  border-spacing: 20px;
+  border: solid black 3px;
+}
+.title {
+  color: rgb(99, 13, 179);
+  font-size: xx-large;
+  font-weight: bold;
+}
+.food {
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+th {
+  letter-spacing: 2px;
+}
+tbody td {
+  text-align: justify;
+}
