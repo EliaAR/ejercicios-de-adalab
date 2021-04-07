@@ -3,8 +3,7 @@
   --title-color: grey;
   --subtitle-color: grey;
   --menua-color: green;
-  --pa-color:green;
-  --
+  --pa-color: green;
 }
 
 body {
@@ -48,7 +47,6 @@ ul {
   color: var(--menua-color);
   text-decoration: none;
 }
-
 p a {
   color: var(--pa-color);
 }
