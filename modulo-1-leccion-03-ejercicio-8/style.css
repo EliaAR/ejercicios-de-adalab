@@ -1,0 +1,54 @@
+:root {
+  --brand-color: #eaeaea;
+  --title-color: grey;
+  --subtitle-color: grey;
+  --menua-color: green;
+  --pa-color:green;
+  --
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background-color: var(--brand-color);
+  padding: 20px;
+}
+
+main {
+  padding: 20px;
+}
+
+p {
+  width: 50%;
+  font-size: 16px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.title {
+  color: var(--title-color);
+  margin: 0;
+}
+
+.subtitle {
+  color: var(--subtitle-color);
+  margin: 0;
+}
+
+.menu li {
+  display: inline;
+}
+
+.menu a {
+  color: var(--menua-color);
+  text-decoration: none;
+}
+
+p a {
+  color: var(--pa-color);
+}
