@@ -1,0 +1,17 @@
+.cuerpo {
+  border: 1px solid purple;
+  margin: 0%;
+  padding: 0;
+}
+.cabecera {
+  background-color: gray;
+  min-height: 10vh;
+}
+.principal {
+  background-color: rgb(49, 47, 47);
+  min-height: 80vh;
+}
+.pie {
+  background-color: orange;
+  min-height: 10vh;
+}
