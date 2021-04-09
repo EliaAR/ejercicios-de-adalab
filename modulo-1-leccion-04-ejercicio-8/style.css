@@ -1,0 +1,55 @@
+.principal {
+  background-color: black;
+}
+.principal-content {
+  max-width: 600px;
+  color: white;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.figure {
+  max-width: 600px;
+  margin: auto;
+  min-height: 80vh;
+}
+.link {
+  text-decoration: none;
+  color: white;
+  padding-left: 15px;
+}
+.who-when {
+  color: grey;
+  display: flex;
+  justify-content: space-between;
+}
+.written {
+  color: rgb(100, 98, 98);
+}
+.final {
+  border-top: 1px solid rgb(179, 176, 176);
+}
+.final-footer {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.final-footer section {
+  color: rgb(100, 98, 98);
+}
+.final-footer nav {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.final-footer nav a {
+  text-decoration: none;
+  color: rgb(100, 98, 98);
+}
