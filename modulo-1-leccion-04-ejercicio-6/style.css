@@ -1,0 +1,41 @@
+.cabecera {
+  min-height: 10vh;
+  background-color: rgb(39, 38, 38);
+  color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.principal {
+  min-height: 30vh;
+  display: flex;
+}
+.lateral1 {
+  min-width: 15vw;
+  background-color: rgb(240, 139, 103);
+  text-align: center;
+}
+.aside_tittle {
+  margin-left: 1000px;
+}
+.artículo {
+  min-width: 60vw;
+  background-color: rgb(107, 106, 106);
+}
+.paragraph {
+  text-align: justify;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.lateral2 {
+  min-width: 15vw;
+  background-color: rgb(240, 139, 103);
+  text-align: center;
+}
+.pie {
+  min-height: 10vh;
+  background-color: rgb(184, 181, 181);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
