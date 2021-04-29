@@ -1,0 +1,17 @@
+.button {
+  padding: 200px;
+  border: solid 3px purple;
+  background-color: rgb(241, 248, 244);
+  color: purple;
+  font-weight: bold;
+  font-size: 50px;
+}
+.one {
+  transform: translate(50px, 150px);
+}
+.two {
+  transform: translate(125px, 150px);
+}
+.disable {
+  opacity: 0.33;
+}
