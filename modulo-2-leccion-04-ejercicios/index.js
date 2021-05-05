@@ -49,3 +49,28 @@ console.log(result4);
 
 //ejercicio7d
 console.log(`Este número es IMPAR: ${pintar7b}`);
+
+//Ejercicio10
+let element = document.querySelector(".exercise10Container");
+let elementStyle = window.getComputedStyle(element);
+let elementDimension = elementStyle.getPropertyValue("box-sizing");
+let elementWidth = elementStyle.getPropertyValue("width");
+let elementWidthParse = parseInt(elementWidth);
+let elementPadding = elementStyle.getPropertyValue("padding");
+let elementPaddingParse = parseInt(elementPadding);
+let elementBorderWidth = elementStyle.getPropertyValue("border-width");
+let elementBorderWidthParse = parseInt(elementWidth);
+let see = (a, b, c, d) => {
+  if (a === "border-box") {
+    return `${b + c + d}`;
+  } else {
+    return `${b}`;
+  }
+};
+let calculation = see(
+  elementDimension,
+  elementWidthParse,
+  elementPaddingParse,
+  elementBorderWidthParse
+);
+console.log(calculation);
