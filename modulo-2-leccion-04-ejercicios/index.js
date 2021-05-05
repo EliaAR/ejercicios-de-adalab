@@ -12,5 +12,19 @@ function math_fuera(a){
     const total = no_IVA + IVA;
     return `Precio sin IVA: ${no_IVA}, IVA: ${IVA} y Total: ${total}.`
 }
-  const result = math_fuera (10);
-  console.log(result);
+  const result3 = math_fuera (10);
+  console.log(result3);
+
+
+  //Ejercicio 4
+  function comprobation(a){
+    if(a % 2 == 0) {
+        return "par";
+      }
+      else {
+        return "impar";
+      }
+    }
+    const result4 = comprobation(15);
+    const pintar4 = document.querySelector(".js-exercise4");
+    pintar4.innerHTML = result4;
