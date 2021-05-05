@@ -2,17 +2,17 @@
 function media(a, b, c, d) {
   return (a + b + c) / d;
 }
-const kakota = media(10, 14, 34, 3);
+let kakota = media(10, 14, 34, 3);
 console.log(kakota);
 
 //Ejercicio 3
 function math_fuera(a) {
-  const no_IVA = a;
-  const IVA = a * 0.21;
-  const total = no_IVA + IVA;
+  let no_IVA = a;
+  let IVA = a * 0.21;
+  let total = no_IVA + IVA;
   return `Precio sin IVA: ${no_IVA}, IVA: ${IVA} y Total: ${total}.`;
 }
-const result3 = math_fuera(10);
+let result3 = math_fuera(10);
 console.log(result3);
 
 //Ejercicio 4
@@ -23,13 +23,29 @@ function comprobation(a) {
     return "impar";
   }
 }
-const result4 = comprobation(15);
-const pintar4 = document.querySelector(".js-exercise4");
+let result4 = comprobation(15);
+let pintar4 = document.querySelector(".js-exercise4");
 pintar4.innerHTML = result4;
 
 //Ejercicio5
 function getEl(selector) {
   return document.querySelector(selector);
 }
-const result5 = getEl(".js-exercise5");
+let result5 = getEl(".js-exercise5");
 console.log(result5);
+
+//Ejercicio7a
+let pintar7 = getEl(".js-exercise7");
+pintar7.innerHTML = pintar7.innerText;
+console.log(pintar7.innerHTML);
+
+//Ejercicio7b
+let pintar7b = parseInt(pintar7.innerHTML);
+console.log(typeof pintar7b);
+
+//Ejercicio7c
+result4 = comprobation(pintar7b.innerText);
+console.log(result4);
+
+//ejercicio7d
+console.log(`Este número es IMPAR: ${pintar7b}`);
