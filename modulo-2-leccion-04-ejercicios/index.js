@@ -34,6 +34,17 @@ function getEl(selector) {
 let result5 = getEl(".js-exercise5");
 console.log(result5);
 
+//Ejercicio6
+function comprobationTwo(a) {
+  if (a == undefined) {
+    return `No existe ningún elemento con clase, id o tag llamado ${result5}`;
+  } else {
+    return `that's ok`;
+  }
+}
+let result6 = comprobationTwo(result5);
+console.log(result6);
+
 //Ejercicio7a
 let pintar7 = getEl(".js-exercise7");
 pintar7.innerHTML = pintar7.innerText;
