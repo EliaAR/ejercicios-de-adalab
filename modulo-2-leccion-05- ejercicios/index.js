@@ -6,16 +6,25 @@ function change() {
 }
 moreNames.addEventListener("click", change);
 
+//Ejercicio2
+let newButton = document.querySelector(".js-exercise2-button");
+function enterName() {
+  let newInput = document.getElementById("js-exercise2-input");
+  console.log(`hola ${newInput.value}`);
+}
+newButton.addEventListener("click", enterName);
+
 //Ejercicio3
 let carajote = document.querySelector(".js-paragraph3");
-//let content = "<p><p>";
+let pAdded = false;
 function newParagraph() {
-  let paragraph = document.createElement("p");
-  paragraph.textContent =
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit";
-
-  carajote.insertAdjacentElement("beforeend", paragraph);
-  //carajote = content.innterText;
+  if (!pAdded) {
+    let paragraph = document.createElement("p");
+    paragraph.textContent =
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit";
+    carajote.insertAdjacentElement("beforeend", paragraph);
+  }
+  pAdded = true;
 }
 carajote.addEventListener("mouseover", newParagraph);
 
