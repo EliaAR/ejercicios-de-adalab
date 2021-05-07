@@ -29,3 +29,23 @@ function newParagraph() {
 carajote.addEventListener("mouseover", newParagraph);
 
 //Ejercicio4
+//let exercis4 = document.querySelector(".js-exercise4");
+//function changeColor() {
+//if (window.innerHeight + window.scrollY >= 250) {
+//exercise4.classList.add("orange");
+//} else {
+//exercise4.classList.add("black");
+//}
+//}
+//exercis4.addEventListener("scroll", changeColor);
+
+//Ejercicio5
+let exercise5 = document.body;
+function changeColor2(event) {
+  if (event.key == "r") {
+    exercise5.classList.add("orange");
+  } else if (event.key == "m") {
+    exercise5.classList.add("black");
+  }
+}
+document.addEventListener("keydown", changeColor2);
