@@ -29,15 +29,25 @@ function newParagraph() {
 carajote.addEventListener("mouseover", newParagraph);
 
 //Ejercicio4
-//let exercis4 = document.querySelector(".js-exercise4");
-//function changeColor() {
-//if (window.innerHeight + window.scrollY >= 250) {
-//exercise4.classList.add("orange");
-//} else {
-//exercise4.classList.add("black");
-//}
-//}
-//exercis4.addEventListener("scroll", changeColor);
+let exercise4 = document.querySelector(".js-exercise4");
+function changeColor() {
+  if (window.scrollY >= 250) {
+    if (exercise4.classList.contains("black")) {
+      exercise4.classList.remove("black");
+    }
+    if (!exercise4.classList.contains("orange")) {
+      exercise4.classList.add("orange");
+    }
+  } else {
+    if (exercise4.classList.contains("orange")) {
+      exercise4.classList.remove("orange");
+    }
+    if (!exercise4.classList.contains("black")) {
+      exercise4.classList.add("black");
+    }
+  }
+}
+window.addEventListener("scroll", changeColor);
 
 //Ejercicio5
 let exercise5 = document.body;
