@@ -7,11 +7,8 @@ let phrase2 = `Mi nombre es ${adalaber2.name}, tengo ${adalaber2.age} y soy ${ad
 place2.innerHTML = phrase2;
 
 //Ejercicio 2
-function run() {
-  console.log("Estoy corriendo");
-}
-run();
-function runAMarathon(distance) {
+adalaber1.run = () => console.log("Estoy corriendo");
+adalaber1.run();
+adalaber1.runAMarathon = (distance) =>
   console.log(`Estoy corriendo un maratón de ${distance} kilometro`);
-}
-runAMarathon(50);
+adalaber1.runAMarathon(50);
