@@ -28,39 +28,49 @@ function addThings(e) {
 button6.addEventListener("click", addThings);
 
 //Ejercicio 7a
-let adalabersQuantum = 0;
-let countAdalabers = stadistic.forEach(function () {
-  adalabersQuantum++;
+let countAdalabers = 0;
+stadistic.forEach(function () {
+  countAdalabers++;
 });
-console.log(adalabersQuantum);
+console.log(countAdalabers);
 
 //Ejercicio 7b
 let adalabersQuantumB = 0;
 let ageQuantum = 0;
-let averaeAge = stadistic.forEach(function (item) {
+stadistic.forEach(function (item) {
   adalabersQuantumB++;
   ageQuantum += item.age;
 });
-let media7b = ageQuantum / adalabersQuantumB;
-console.log(media7b);
+let averaeAge = ageQuantum / adalabersQuantumB;
+console.log(averaeAge);
 
 //Ejerciccio 7c
-let youngerQuantum = stadistic[0].age;
-let nameQuantum = stadistic[0].name;
-let theYoungest = stadistic.forEach(function (item) {
-  let valoractual = item.age;
-  if (youngerQuantum > valoractual) {
-    youngerQuantum = valoractual;
+let theYoungest = stadistic[0];
+stadistic.forEach(function (item) {
+  if (theYoungest > item.age) {
+    theYoungest = item;
   }
 });
-console.log(youngerQuantum);
+console.log(theYoungest.name);
 
 //Ejercicio 7d
-let diseñadorasQuantum = 0;
-let countDesigners = stadistic.forEach(function (item) {
+let countDesigners = 0;
+stadistic.forEach(function (item) {
   let valoractual2 = item.profesion;
   if (valoractual2 === "diseñadora") {
-    diseñadorasQuantum++;
+    countDesigners++;
   }
 });
-console.log(diseñadorasQuantum);
+console.log(countDesigners);
+
+//Ejercicio 8
+let classes = document.querySelectorAll(".js-name8");
+const corp = document.querySelector(".js-container");
+function handlerButton() {
+  corp.classList.toggle("js-background");
+}
+classes[0].addEventListener("click", handlerButton);
+classes[1].addEventListener("click", handlerButton);
+classes[2].addEventListener("click", handlerButton);
+
+//Ejercicio 10
