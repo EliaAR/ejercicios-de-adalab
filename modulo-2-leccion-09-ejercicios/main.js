@@ -9,3 +9,11 @@ function get100Numbers() {
   return array1;
 }
 console.log(get100Numbers());
+
+//Ejercicio 2
+function getReversed100Numbers() {
+  let array2 = get100Numbers();
+  array2.reverse();
+  return array2;
+}
+console.log(getReversed100Numbers());
