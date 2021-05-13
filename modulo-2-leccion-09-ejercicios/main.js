@@ -17,3 +17,26 @@ function getReversed100Numbers() {
   return array2;
 }
 console.log(getReversed100Numbers());
+
+//Ejercicio 3
+let lostNumbers = [4, 8, 15, 16, 23, 42];
+let arrayPares = [];
+let arrayPrimos = [];
+
+lostNumbers.forEach(function (lostNumbers) {
+  if (lostNumbers % 2 === 0) {
+    arrayPares.push(lostNumbers);
+  }
+});
+console.log(arrayPares);
+
+lostNumbers.forEach(function (a) {
+  if (a % 3 === 0) {
+    arrayPrimos.push(a);
+  }
+});
+console.log(arrayPrimos);
+let concatNumbers = arrayPares.concat(arrayPrimos);
+console.log(concatNumbers);
+
+//Ejercicio 4
