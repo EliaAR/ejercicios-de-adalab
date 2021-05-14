@@ -11,3 +11,14 @@ function tree1(heightTree) {
   }
 }
 tree1(5);
+
+//Separación
+console.log("");
+console.log("");
+
+//Ejercicio 6
+let start = "★";
+let verticalLine = "|";
+console.log(start);
+tree1(5);
+console.log(verticalLine);
