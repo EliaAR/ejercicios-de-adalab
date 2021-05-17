@@ -82,4 +82,4 @@ losCheckboxes.forEach(function (elCheckbox, index) {
   });
 }); // Declarar función dentro para poder acceder a index del array de tareas que es el mismo que el tarea actual
 
-// linea 77: remember! eventos son para elementos HTML, no para objetos ni arrays. Por eso hay que meterlo en un forEach para que itere; ya que querySelectorAll devuelve un array
+// linea 77: remember! eventos son para elementos HTML, no para objetos ni arrays. Por eso hay que meterlo en un forEach para que itere; ya que querySelectorAll devuelve un array.
