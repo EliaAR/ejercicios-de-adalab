@@ -1,7 +1,6 @@
 let divContainer = document.querySelector(".js-divContainer");
 let inputText = document.querySelector(".js-inputText");
 let button = document.querySelector(".js-button");
-let paragraph = document.querySelector(".js-paragraph");
 let arrayPeople = [];
 
 if (localStorage.getItem("arrayPeople")) {
@@ -21,6 +20,7 @@ function result() {
         searchValue: inputText.value,
         results: data.results,
       });
+      localStorage.setItem("arrayPeople", JSON.stringify(arrayPeople));
     });
 }
 
@@ -30,11 +30,10 @@ function comprobation() {
   );
   if (!cachedResult) {
     result();
-    localStorage.setItem("arrayPeople", JSON.stringify(arrayPeople));
   } else {
+    let content = "";
     cachedResult.results.forEach(function (people) {
-      content +=
-        paragraph.innerText = `<li>Nombre: ${arrayPeople.name} y género: ${arrayPeople.gender}</i>`;
+      content += `<li>Nombre: ${people.name} y género: ${people.gender}</i>`;
     });
     divContainer.innerHTML = `<ul> ${content}</ul>`;
   }
