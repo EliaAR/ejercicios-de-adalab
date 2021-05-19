@@ -34,3 +34,18 @@ console.log(premium);
 let pins = [2389, 2384, 2837, 5232, 8998];
 let parNumbers = pins.filter((number) => number % 2 === 0);
 console.log(parNumbers);
+
+//Ejercicio 6
+const usersTwo = [
+  { name: "María", isPremium: false, pin: 2389 },
+  { name: "Lucía", isPremium: true, pin: 2384 },
+  { name: "Susana", isPremium: true, pin: 2837 },
+  { name: "Rocío", isPremium: false, pin: 5232 },
+  { name: "Inmaculada", isPremium: false, pin: 8998 },
+];
+let password = usersTwo.filter((number) => {
+  if (number.pin % 2 === 0) {
+    return number.name;
+  }
+});
+console.log(password);
