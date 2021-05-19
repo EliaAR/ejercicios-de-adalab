@@ -54,3 +54,20 @@ console.log(password);
 let times = [56, 9, 45, 28, 35];
 const result = times.reduce((acc, number) => acc + number) / times.length;
 console.log(result);
+
+//Ejercicio 8
+let runners = [
+  { name: "Gregory Goyle", time: 56 },
+  { name: "Nymphadora Tonks", time: 9 },
+  { name: "Luna Lovegood", time: 45 },
+  { name: "Cedric Diggory", time: 28 },
+  { name: "Cho Chang", time: 35 },
+];
+let winner = runners.reduce((acc, runner) => {
+  if (acc.time > runner.time) {
+    return runner;
+  } else {
+    return acc;
+  }
+}, runners[0]);
+console.log(winner);
