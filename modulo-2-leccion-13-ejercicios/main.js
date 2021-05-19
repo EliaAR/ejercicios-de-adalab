@@ -29,3 +29,8 @@ console.log(hi);
 //Ejercicio 4
 let premium = users.filter((name) => name.isPremium);
 console.log(premium);
+
+//Ejercicio 5
+let pins = [2389, 2384, 2837, 5232, 8998];
+let parNumbers = pins.filter((number) => number % 2 === 0);
+console.log(parNumbers);
