@@ -49,3 +49,8 @@ let password = usersTwo.filter((number) => {
   }
 });
 console.log(password);
+
+//Ejercicio 7
+let times = [56, 9, 45, 28, 35];
+const result = times.reduce((acc, number) => acc + number) / times.length;
+console.log(result);
