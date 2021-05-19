@@ -25,3 +25,7 @@ let hi = users.map((user) => {
   }
 });
 console.log(hi);
+
+//Ejercicio 4
+let premium = users.filter((name) => name.isPremium);
+console.log(premium);
