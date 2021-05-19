@@ -107,3 +107,7 @@ let indexUser = usersThree.findIndex((user) => user.pin === 5232);
 console.log(indexUser);
 let deleteUser = usersThree.splice(3, 1);
 console.log(usersThree);
+
+//Ejercicio 11
+runners.sort((a, b) => a.time - b.time);
+console.log(runners);
