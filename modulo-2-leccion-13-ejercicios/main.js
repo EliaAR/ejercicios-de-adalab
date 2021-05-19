@@ -111,3 +111,18 @@ console.log(usersThree);
 //Ejercicio 11
 runners.sort((a, b) => a.time - b.time);
 console.log(runners);
+
+//Ejercicio 12a
+usersTwo.sort(function (a, b) {
+  if (a.name > b.name) {
+    return 1;
+  }
+  if (a.name < b.name) {
+    return -1;
+  }
+});
+console.log(usersTwo);
+
+//Ejercicio 12b
+usersTwo.sort((a, b) => a.pin - b.pin);
+console.log(usersTwo);
