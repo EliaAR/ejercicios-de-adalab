@@ -6,7 +6,11 @@ function StudentsList(props) {
       {props.students
         .filter((student) => student.promo === "A")
         .map((student, index) => (
-          <Student key={index} name={student.name} />
+          <Student
+            key={index}
+            name={student.name}
+            description={student.description}
+          />
         ))}
     </ul>
   );

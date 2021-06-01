@@ -9,5 +9,9 @@ function Student(props) {
 Student.defaultProps = {
   description: "No hay descripcion",
 };
+Student.propTypes = {
+  name: PropTypes.string.isRequired,
+  precio: PropTypes.number.isRequired,
+};
 
 export { Student };
