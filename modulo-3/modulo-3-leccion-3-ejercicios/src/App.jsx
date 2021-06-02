@@ -1,6 +1,6 @@
 import "./App.scss";
-import { StudentsList } from "./components/StudentsList";
-import { HalfPage } from "./components/Halfpage";
+import { StudentsList } from "./StudentsList";
+import { HalfPage } from "./Halfpage";
 
 const students = [
   {

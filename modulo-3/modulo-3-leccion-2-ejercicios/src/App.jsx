@@ -1,6 +1,6 @@
 import "./App.css";
-import { MediaList } from "./components/MediaList";
-import { CatList } from "./components/CatList";
+import { MediaList } from "./MediaList";
+import { CatList } from "./CatList";
 
 function App() {
   return (
