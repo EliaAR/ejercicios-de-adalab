@@ -23,21 +23,18 @@ const students = [
 function App() {
   return (
     <>
-      <div className="App">
-        <StudentsList students={students} />
-      </div>
-      <div>
-        <HalfPage>
-          <section className="section__Container">
-            <h1>Título</h1>
-            <p>Estoy en la izquierda</p>
-          </section>
-          <section className="section__Container">
-            <h2>Título 2</h2>
-            <p>Estoy en la derecha</p>
-          </section>
-        </HalfPage>
-      </div>
+      <StudentsList students={students} />
+
+      <HalfPage>
+        <section className="section__Container">
+          <h1>Título</h1>
+          <p>Estoy en la izquierda</p>
+        </section>
+        <section className="section__Container">
+          <h2>Título 2</h2>
+          <p>Estoy en la derecha</p>
+        </section>
+      </HalfPage>
     </>
   );
 }
