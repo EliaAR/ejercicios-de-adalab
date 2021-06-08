@@ -1,12 +1,17 @@
-import { useState } from "react";
 import "./form.scss";
 
-function Form() {
-  const [text, setText] = useState("");
-  const [textarea, setTextarea] = useState("");
-  const [select, setSelect] = useState("Español");
-  const [radio, setRadio] = useState("todos los públicos");
-  const [checkboxes, setCheckboxes] = useState(["Comedia"]);
+function Form({
+  text,
+  textarea,
+  select,
+  radio,
+  checkboxes,
+  setText,
+  setTextarea,
+  setSelect,
+  setRadio,
+  setCheckboxes,
+}) {
   return (
     <>
       <form className="form">
@@ -17,12 +22,14 @@ function Form() {
           value={text}
           onChange={(evt) => setText(evt.currentTarget.value)}
         />
+
         <textarea
           className="form__input"
           name="description"
           value={textarea}
           onChange={(evt) => setTextarea(evt.currentTarget.value)}
         ></textarea>
+
         <select
           className="form__input"
           name="language"
@@ -33,6 +40,7 @@ function Form() {
           <option value="Inglés">Inglés</option>
           <option value="Portugués">Portugués</option>
         </select>
+
         <fieldset
           className="for__input"
           onChange={(evt) => setRadio(evt.target.value)}
@@ -49,6 +57,7 @@ function Form() {
           <label htmlFor="18">Mayor de edad</label>
           <input type="radio" value="18" id="18" name="public" />
         </fieldset>
+
         <fieldset>
           <label htmlFor="comedia">Comedia</label>
           <input
@@ -102,10 +111,12 @@ function Form() {
             }}
           />
         </fieldset>
+
         <fieldset>
           <input type="file" id="" />
         </fieldset>
       </form>
+
       <p>{text}</p>
       <p>{textarea}</p>
       <p>{select}</p>
