@@ -14,7 +14,7 @@ function Form({
 }) {
   return (
     <>
-      <form className="form">
+      <form className="form" onSubmit={evt.preventDeault()}>
         <input
           className="form__input"
           name="name"
@@ -115,6 +115,8 @@ function Form({
         <fieldset>
           <input type="file" id="" />
         </fieldset>
+
+        <button onClick={(evt) => setText("")}></button>
       </form>
 
       <p>{text}</p>
