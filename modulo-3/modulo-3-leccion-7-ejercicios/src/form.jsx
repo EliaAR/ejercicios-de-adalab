@@ -14,7 +14,7 @@ function Form({
 }) {
   return (
     <>
-      <form className="form" onSubmit={evt.preventDeault()}>
+      <form className="form" onSubmit={(evt) => evt.preventDeault()}>
         <input
           className="form__input"
           name="name"
@@ -116,7 +116,17 @@ function Form({
           <input type="file" id="" />
         </fieldset>
 
-        <button onClick={(evt) => setText("")}></button>
+        <button
+          onClick={() => {
+            setText("");
+            setTextarea("");
+            setSelect("");
+            setRadio("");
+            setCheckboxes([]);
+          }}
+        >
+          Reset
+        </button>
       </form>
 
       <p>{text}</p>
