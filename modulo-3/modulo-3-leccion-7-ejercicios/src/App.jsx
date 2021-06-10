@@ -12,13 +12,13 @@ function App() {
     <div className="App">
       <Form
         text={text}
-        setText={setText}
+        onChangeText={(evt) => setText(evt.currentTarget.value)}
         textarea={textarea}
-        setTextarea={setTextarea}
+        onChangeTextarea={(evt) => setTextarea(evt.currentTarget.value)}
         select={select}
-        setSelect={setSelect}
+        onChangeSelect={(evt) => setSelect(evt.currentTarget.value)}
         radio={radio}
-        setRadio={setRadio}
+        onChangeRadio={(evt) => setRadio(evt.target.value)}
         checkboxes={checkboxes}
         setCheckboxes={setCheckboxes}
       />

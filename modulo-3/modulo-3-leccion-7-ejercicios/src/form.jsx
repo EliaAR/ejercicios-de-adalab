@@ -6,10 +6,10 @@ function Form({
   select,
   radio,
   checkboxes,
-  setText,
-  setTextarea,
-  setSelect,
-  setRadio,
+  onChangeText
+  onChangeTexarea,
+  onChangeSelect,
+  onChangeRadio,
   setCheckboxes,
 }) {
   return (
@@ -20,21 +20,21 @@ function Form({
           name="name"
           type="text"
           value={text}
-          onChange={(evt) => setText(evt.currentTarget.value)}
+          onChange={onChangeText}
         />
 
         <textarea
           className="form__input"
           name="description"
           value={textarea}
-          onChange={(evt) => setTextarea(evt.currentTarget.value)}
+          onChange={onChangeTextarea}
         ></textarea>
 
         <select
           className="form__input"
           name="language"
           value={select}
-          onChange={(evt) => setSelect(evt.currentTarget.value)}
+          onChange={onChangeSelect}
         >
           <option value="Español">Español</option>
           <option value="Inglés">Inglés</option>
@@ -43,7 +43,7 @@ function Form({
 
         <fieldset
           className="for__input"
-          onChange={(evt) => setRadio(evt.target.value)}
+          onChange={onChangeRadio}
         >
           <label htmlFor="todos">Todos los públicos</label>
           <input
