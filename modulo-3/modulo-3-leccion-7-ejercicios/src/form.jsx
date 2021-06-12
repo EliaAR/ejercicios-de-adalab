@@ -77,7 +77,7 @@ function Form({
           <input
             type="checkbox"
             id="comedia"
-            name="gender"
+            name="genre"
             value="Comedia"
             checked={checkboxes.includes("Comedia")}
             onChange={onChangeCheckboxes}
@@ -86,7 +86,7 @@ function Form({
           <input
             type="checkbox"
             id="fantasía"
-            name="gender"
+            name="genre"
             value="Fantasía"
             checked={checkboxes.includes("Fantasía")}
             onChange={onChangeCheckboxes}
@@ -95,7 +95,7 @@ function Form({
           <input
             type="checkbox"
             id="suspense"
-            name="gender"
+            name="genre"
             value="Suspense"
             checked={checkboxes.includes("Suspense")}
             onChange={onChangeCheckboxes}
@@ -119,3 +119,17 @@ function Form({
 }
 
 export { Form };
+
+// function ({state, onChange}){
+//   return(
+//      <form className="form" onSubmit={(evt) => evt.preventDeault()}>
+//         <input
+//           className="form__input"
+//           name="name"
+//           type="text"
+//           value={state.name}
+//           onChange={onChange}
+//         />
+//         ...
+//   )
+// }
