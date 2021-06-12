@@ -6,11 +6,12 @@ function Form({
   select,
   radio,
   checkboxes,
-  onChangeText
-  onChangeTexarea,
+  onChangeText,
+  onChangeTextarea,
   onChangeSelect,
   onChangeRadio,
-  setCheckboxes,
+  onChangeCheckboxes,
+  onReset,
 }) {
   return (
     <>
@@ -41,21 +42,34 @@ function Form({
           <option value="Portugués">Portugués</option>
         </select>
 
-        <fieldset
-          className="for__input"
-          onChange={onChangeRadio}
-        >
+        <fieldset className="for__input">
           <label htmlFor="todos">Todos los públicos</label>
           <input
             type="radio"
             value="todos los públicos"
             id="todos"
             name="public"
+            checked={radio === "todos los públicos"}
+            onChange={onChangeRadio}
           />
           <label htmlFor="12">12 años</label>
-          <input type="radio" value="12" id="12" name="public" />
+          <input
+            type="radio"
+            value="12"
+            id="12"
+            name="public"
+            checked={radio === "12"}
+            onChange={onChangeRadio}
+          />
           <label htmlFor="18">Mayor de edad</label>
-          <input type="radio" value="18" id="18" name="public" />
+          <input
+            type="radio"
+            value="18"
+            id="18"
+            name="public"
+            checked={radio === "18"}
+            onChange={onChangeRadio}
+          />
         </fieldset>
 
         <fieldset>
@@ -66,15 +80,7 @@ function Form({
             name="gender"
             value="Comedia"
             checked={checkboxes.includes("Comedia")}
-            onChange={(evt) => {
-              if (evt.target.checked) {
-                setCheckboxes([...checkboxes, evt.target.value]);
-              } else {
-                setCheckboxes(
-                  checkboxes.filter((item) => evt.target.value !== item)
-                );
-              }
-            }}
+            onChange={onChangeCheckboxes}
           />
           <label htmlFor="fantasía">Fantasía</label>
           <input
@@ -83,15 +89,7 @@ function Form({
             name="gender"
             value="Fantasía"
             checked={checkboxes.includes("Fantasía")}
-            onChange={(evt) => {
-              if (evt.target.checked) {
-                setCheckboxes([...checkboxes, evt.target.value]);
-              } else {
-                setCheckboxes(
-                  checkboxes.filter((item) => evt.target.value !== item)
-                );
-              }
-            }}
+            onChange={onChangeCheckboxes}
           />
           <label htmlFor="suspense">Suspense</label>
           <input
@@ -100,15 +98,7 @@ function Form({
             name="gender"
             value="Suspense"
             checked={checkboxes.includes("Suspense")}
-            onChange={(evt) => {
-              if (evt.target.checked) {
-                setCheckboxes([...checkboxes, evt.target.value]);
-              } else {
-                setCheckboxes(
-                  checkboxes.filter((item) => evt.target.value !== item)
-                );
-              }
-            }}
+            onChange={onChangeCheckboxes}
           />
         </fieldset>
 
@@ -116,17 +106,7 @@ function Form({
           <input type="file" id="" />
         </fieldset>
 
-        <button
-          onClick={() => {
-            setText("");
-            setTextarea("");
-            setSelect("");
-            setRadio("");
-            setCheckboxes([]);
-          }}
-        >
-          Reset
-        </button>
+        <button onClick={onReset}>Reset</button>
       </form>
 
       <p>{text}</p>

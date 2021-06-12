@@ -20,7 +20,22 @@ function App() {
         radio={radio}
         onChangeRadio={(evt) => setRadio(evt.target.value)}
         checkboxes={checkboxes}
-        setCheckboxes={setCheckboxes}
+        onChangeCheckboxes={(evt) => {
+          if (evt.target.checked) {
+            setCheckboxes([...checkboxes, evt.target.value]);
+          } else {
+            setCheckboxes(
+              checkboxes.filter((item) => evt.target.value !== item)
+            );
+          }
+        }}
+        onReset={() => {
+          setText("");
+          setTextarea("");
+          setSelect("");
+          setRadio("");
+          setCheckboxes([]);
+        }}
       />
     </div>
   );
