@@ -11,29 +11,25 @@ app.listen(serverPort, () => {
   console.log(`App listening at http://localhost:${serverPort}`);
 });
 
-// users
+const staticServerPath = "./public";
+app.use(express.static(staticServerPath));
 
-const users = []; // fake users data base
-
-// api endpoints
+const users = [];
 
 app.post("/user", (req, res) => {
   console.log("Body params:", req.body);
   console.log("Body param userName:", req.body.userName);
   console.log("Body param userEmail:", req.body.userEmail);
-
-  // add new user to daba base
   users.push({
     name: req.body.userName,
     email: req.body.userEmail,
   });
-
   res.json({
     result: "User created",
   });
 });
 
-app.get("/users", (req, res) => {
+app.post("/users", (req, res) => {
   const filterByName = req.body.filterByName;
   const filterByMail = req.body.filterByMail;
   console.log(filterByName);
