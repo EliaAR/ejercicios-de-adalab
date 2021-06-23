@@ -2,21 +2,21 @@ const express = require("express");
 const cors = require("cors");
 
 // create server
-const server = express();
+const app = express();
 
 // set express middleware
-server.use(express.json());
-server.use(cors());
+app.use(express.json());
+app.use(cors());
 
 // init express aplication
 const serverPort = 3000;
-server.listen(serverPort, () => {
+app.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
 
 // static server
 const staticServerPath = "./public";
-server.use(express.static(staticServerPath));
+app.use(express.static(staticServerPath));
 
 // users
 
@@ -24,7 +24,7 @@ const users = []; // fake users data base
 
 // api endpoints
 
-server.post("/user", (req, res) => {
+app.post("/user", (req, res) => {
   console.log("Query params:", req.query);
   console.log("Query param userName:", req.query.userName);
   console.log("Query param userEmail:", req.query.userEmail);
@@ -40,7 +40,7 @@ server.post("/user", (req, res) => {
   });
 });
 
-server.get("/users", (req, res) => {
+app.get("/users", (req, res) => {
   const filterByName = req.query.filterByName;
   const filterByMail = req.query.filterByMail;
   console.log(filterByName);
