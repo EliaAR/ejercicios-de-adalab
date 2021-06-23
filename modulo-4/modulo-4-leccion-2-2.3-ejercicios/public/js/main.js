@@ -23,7 +23,8 @@ document
 
 document.querySelector(".js-btn-get-users").addEventListener("click", () => {
   const filterByName = document.querySelector(".js-inputFilter");
-  const queryParamsGet = `?filterByName=${filterByName.value}`;
+  const filterByMail = document.querySelector(".js-inputFilterMail");
+  const queryParamsGet = `?filterByName=${filterByName.value}&filterByMail=${filterByMail.value}`;
   fetch("http://localhost:3000/users" + queryParamsGet)
     .then((response) => response.json())
     .then((responseData) => {

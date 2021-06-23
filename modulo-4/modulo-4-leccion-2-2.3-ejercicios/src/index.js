@@ -42,8 +42,12 @@ server.post("/user", (req, res) => {
 
 server.get("/users", (req, res) => {
   const filterByName = req.query.filterByName;
+  const filterByMail = req.query.filterByMail;
   console.log(filterByName);
-  const filterUsers = users.filter((user) => user.name.includes(filterByName));
+  console.log(filterByMail);
+  const filterUsers = users
+    .filter((user) => user.name.includes(filterByName))
+    .filter((user) => user.email.includes(filterByMail));
   console.log(filterUsers);
   res.json({
     result: filterUsers,
