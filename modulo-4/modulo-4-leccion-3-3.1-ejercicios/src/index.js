@@ -42,3 +42,32 @@ app.post("/users", (req, res) => {
     result: filterUsers,
   });
 });
+
+app.get("/response-a", (req, res) => {
+  res.json({ result: 'ok' });
+});
+
+// app.get("/response-b", (req, res) => {
+//   res.send(
+//     <!DOCTYPE html>
+//     <html lang="es">
+//       <head>
+//         <title>Pruebita</title>
+//           </head>
+//       <body class="page">
+//         <header>
+//           <h1>Esta es una página de prueba</h1>
+//           </header>
+//       </body>
+//     </html>);
+//  });
+
+app.get("/response-c", (req, res) => {
+  const number = Math.floor(Math.random()*10+1)
+  res.json({ result: number })
+});
+
+app.get("/response-d", (req, res) => {
+  const queryParams = "?user=1&user=2";
+  res.status(200).json({ result: "ok" })
+});
